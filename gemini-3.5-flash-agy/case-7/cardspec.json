@@ -1,0 +1,15 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "bindingId": "next_meeting",
+      "capabilityId": "calendar.events.search",
+      "capabilityVersion": "1.0",
+      "arguments": {
+        "range": "today",
+        "limit": 1
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}

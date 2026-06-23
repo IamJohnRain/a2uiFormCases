@@ -1,0 +1,22 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "bindingId": "weather_data",
+      "capabilityId": "weather.overview.get",
+      "arguments": {
+        "prefectureName": "深圳市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": ["weather_data"],
+    "onVisible": ["weather_data"],
+    "periodic": {
+      "intervalSec": 1800,
+      "bindings": ["weather_data"]
+    }
+  }
+}
