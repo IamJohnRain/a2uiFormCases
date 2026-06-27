@@ -1,0 +1,41 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "bindingId": "weather_now",
+      "capabilityId": "weather.overview.get",
+      "capabilityVersion": "1.0",
+      "arguments": {
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "bindingId": "calendar_next",
+      "capabilityId": "calendar.events.search",
+      "capabilityVersion": "1.0",
+      "arguments": {
+        "range": "next24Hours",
+        "limit": 2
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": [
+      "weather_now",
+      "calendar_next"
+    ],
+    "onVisible": [
+      "weather_now",
+      "calendar_next"
+    ],
+    "periodic": {
+      "intervalSec": 1800,
+      "bindings": [
+        "weather_now",
+        "calendar_next"
+      ]
+    }
+  }
+}

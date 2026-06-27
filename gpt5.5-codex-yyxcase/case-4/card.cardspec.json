@@ -1,0 +1,29 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "bindingId": "next_calendar_event",
+      "capabilityId": "calendar.events.search",
+      "capabilityVersion": "1.0",
+      "arguments": {
+        "range": "next24Hours",
+        "limit": 1
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": [
+      "next_calendar_event"
+    ],
+    "onVisible": [
+      "next_calendar_event"
+    ],
+    "periodic": {
+      "intervalSec": 900,
+      "bindings": [
+        "next_calendar_event"
+      ]
+    }
+  }
+}
