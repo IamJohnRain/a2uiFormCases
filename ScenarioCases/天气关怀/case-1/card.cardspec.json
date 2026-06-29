@@ -1,0 +1,13 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "capabilityId": "weather.overview.get",
+      "arguments": {
+        "prefectureName": "深圳市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "bindingId": "upcoming_meeting",
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [1766448000000, 1766534399999]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": ["upcoming_meeting"],
+    "onVisible": ["upcoming_meeting"],
+    "periodic": {
+      "intervalSec": 1800,
+      "bindings": ["upcoming_meeting"]
+    }
+  }
+}

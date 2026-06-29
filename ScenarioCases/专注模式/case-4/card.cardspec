@@ -1,0 +1,12 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [1751155200000, 1751241599999]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "bindingId": "today_meetings",
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [1766448000000, 1766534399999]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": ["today_meetings"],
+    "onVisible": ["today_meetings"],
+    "periodic": {
+      "intervalSec": 900,
+      "bindings": ["today_meetings"]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "capabilityId": "weather.overview.get",
+      "arguments": {
+        "prefectureName": "深圳市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    },
+    {
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [1751126400000, 1751212799999]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}
