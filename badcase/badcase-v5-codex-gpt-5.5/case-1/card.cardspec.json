@@ -1,0 +1,28 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "bindingId": "today_next_meeting",
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "range": "today",
+        "limit": 1
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": [
+      "today_next_meeting"
+    ],
+    "onVisible": [
+      "today_next_meeting"
+    ],
+    "periodic": {
+      "intervalSec": 900,
+      "bindings": [
+        "today_next_meeting"
+      ]
+    }
+  }
+}
