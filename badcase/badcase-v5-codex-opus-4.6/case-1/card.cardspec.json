@@ -1,0 +1,13 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "range": "today",
+        "limit": 1
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ]
+}

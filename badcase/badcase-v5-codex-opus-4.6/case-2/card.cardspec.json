@@ -1,0 +1,13 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "capabilityId": "weather.overview.get",
+      "arguments": {
+        "districtName": "\u6DF1\u5733",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ]
+}
