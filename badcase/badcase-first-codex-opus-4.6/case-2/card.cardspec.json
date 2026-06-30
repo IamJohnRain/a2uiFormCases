@@ -1,0 +1,22 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "capabilityId": "weather.overview.get",
+      "arguments": {
+        "districtName": "南山区",
+        "prefectureName": "深圳市",
+        "forecastDays": 1
+      },
+      "writeResultTo": "/data/weather"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": ["weather_now"],
+    "onVisible": ["weather_now"],
+    "periodic": {
+      "intervalSec": 3600,
+      "bindings": ["weather_now"]
+    }
+  }
+}

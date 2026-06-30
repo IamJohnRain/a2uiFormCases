@@ -1,0 +1,30 @@
+{
+  "suggestSize": "2x4",
+  "dataBindings": [
+    {
+      "bindingId": "today_afternoon_meetings",
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [
+          1782792000000,
+          1782835199000
+        ]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": [
+      "today_afternoon_meetings"
+    ],
+    "onVisible": [
+      "today_afternoon_meetings"
+    ],
+    "periodic": {
+      "intervalSec": 1800,
+      "bindings": [
+        "today_afternoon_meetings"
+      ]
+    }
+  }
+}

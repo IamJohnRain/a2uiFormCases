@@ -1,0 +1,20 @@
+{
+  "suggestSize": "2x2",
+  "dataBindings": [
+    {
+      "capabilityId": "calendar.events.search",
+      "arguments": {
+        "timeInterval": [1751270400000, 1751356799999]
+      },
+      "writeResultTo": "/data/calendar"
+    }
+  ],
+  "refreshPlan": {
+    "onInstall": ["today_events"],
+    "onVisible": ["today_events"],
+    "periodic": {
+      "intervalSec": 1800,
+      "bindings": ["today_events"]
+    }
+  }
+}
