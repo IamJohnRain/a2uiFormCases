@@ -138,7 +138,7 @@ Form 支持 10 个扩展组件：
 语义按钮。使用 `label` 和 `onClick`，不要使用 `Button.action`。
 
 ```json
-{"id":"btn","component":"Button","label":"打开天气","onClick":[{"call":"clickToDeeplink","args":{"bundleName":"com.huawei.hmsapp.totemweather","abilityName":"com.huawei.hmsapp.totemweather.MainAbility","uri":""}}]}
+{"id":"btn","component":"Button","label":"打开天气","onClick":[{"call":"clickToDeeplink","args":{"bundleName":"","abilityName":"","uri":"hww://www.huawei.com/totemweather?enterType=share&cityCode="}}]}
 ```
 
 - `label`：字符串、表达式，或 `{"path":"/..."}` / `formatString` 兜底

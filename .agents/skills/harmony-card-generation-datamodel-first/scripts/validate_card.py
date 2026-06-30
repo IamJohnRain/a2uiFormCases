@@ -61,7 +61,7 @@ DATA_MODEL_PATH_RE = re.compile(r"\$__dataModel((?:\.[A-Za-z_][A-Za-z0-9_]*|\[(?
 CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 
 EVENT_CAPABILITIES = {
-    "clickToCallPhone": {"phonenumber"},
+    "clickToCallPhone": {"phoneNumber"},
     "clickToDeeplink": {"bundleName", "abilityName", "uri"},
     "clickToIntent": {"intentName", "params"},
 }
@@ -454,8 +454,8 @@ def check_events(comp: dict[str, Any], reporter: Reporter) -> None:
             reporter.error(f"{cid}: event {call} has unsupported args {sorted(extra)}.")
         if missing:
             reporter.error(f"{cid}: event {call} missing args {sorted(missing)}.")
-        if call == "clickToCallPhone" and set(args.keys()) != {"phonenumber"}:
-            reporter.error(f"{cid}: clickToCallPhone args must contain only phonenumber.")
+        if call == "clickToCallPhone" and set(args.keys()) != {"phoneNumber"}:
+            reporter.error(f"{cid}: clickToCallPhone args must contain only phoneNumber.")
 
 
 def check_bindings(comp: dict[str, Any], data_model: Any, reporter: Reporter) -> None:
