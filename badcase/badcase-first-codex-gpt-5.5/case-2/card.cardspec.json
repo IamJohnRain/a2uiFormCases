@@ -2,21 +2,13 @@
   "suggestSize": "2x4",
   "dataBindings": [
     {
-      "bindingId": "shenzhen_weather",
-      "capabilityId": "weather.overview.get",
+      "capabilityId": "ViewWeather",
       "arguments": {
-        "prefectureName": "深圳市",
+        "districtName": "深圳",
+        "prefectureName": "深圳",
         "forecastDays": 1
       },
       "writeResultTo": "/data/weather"
     }
-  ],
-  "refreshPlan": {
-    "onInstall": ["shenzhen_weather"],
-    "onVisible": ["shenzhen_weather"],
-    "periodic": {
-      "intervalSec": 1800,
-      "bindings": ["shenzhen_weather"]
-    }
-  }
+  ]
 }
